@@ -114,5 +114,5 @@ l2 = "/Users/pranayag/mtp/visualize/data/followers.txt.head"
 l3 = "/Users/pranayag/mtp/visualize/data/friends.txt"	
 
 # insert_authors(l1)
-# insert_followers(l2)
-insert_friends(l3)
+insert_followers(l2)
+# insert_friends(l3)

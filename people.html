@@ -1,0 +1,555 @@
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Twitalyzer Free Benchmarks - Twitalyzer</title>
+
+<link href="/5/include/style.css" media="screen" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/5/include/js/fancybox/jquery.fancybox.css?v=2.0.6" type="text/css" media="screen" />
+<style>
+body {
+	padding:0;
+	margin:0;
+	background: url('/5/images/subtle-pattern_smaller.png') repeat;
+	}
+
+@font-face {
+    font-family: 'MuseoSans500Regular';
+    src: url('/5/include/fonts/MuseoSans_500-webfont.eot');
+    src: url('/5/include/fonts/MuseoSans_500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/5/include/fonts/MuseoSans_500-webfont.woff') format('woff'),
+         url('/5/include/fonts/MuseoSans_500-webfont.ttf') format('truetype'),
+         url('/5/include/fonts/MuseoSans_500-webfont.svg#MuseoSans500Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MuseoSans700Regular';
+    src: url('/5/include/fonts/MuseoSans_700-webfont.eot');
+    src: url('/5/include/fonts/MuseoSans_700-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/5/include/fonts/MuseoSans_700-webfont.woff') format('woff'),
+         url('/5/include/fonts/MuseoSans_700-webfont.ttf') format('truetype'),
+         url('/5/include/fonts/MuseoSans_700-webfont.svg#MuseoSans700Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MuseoSlab500Regular';
+    src: url('/5/include/fonts/Museo_Slab_500-webfont.eot');
+    src: url('/5/include/fonts/Museo_Slab_500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/5/include/fonts/Museo_Slab_500-webfont.woff') format('woff'),
+         url('/5/include/fonts/Museo_Slab_500-webfont.ttf') format('truetype'),
+         url('/5/include/fonts/Museo_Slab_500-webfont.svg#MuseoSlab500Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}	
+
+h1 {
+	font-family: 'MuseoSlab500Regular', Arial;
+	font-size:32px;
+	text-align: center;
+	color:black;
+	font-weight: normal;
+}
+
+h2 {
+	font-family: 'MuseoSlab500Regular', Arial;
+	font-size:24px;
+	text-align: left;
+	color:black;
+	font-weight: normal;
+}
+
+h3 {
+	font-family: 'MuseoSlab500Regular', Arial;
+	font-size:18px;
+	text-align: left;
+	color:black;
+	font-weight: normal;
+}
+
+p {
+    font-family: 'MuseoSans500Regular', Arial;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgb(102, 102, 102);
+}
+
+.text {
+    font-family: 'MuseoSans500Regular', Arial;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgb(102, 102, 102);
+}
+
+li {
+    font-family: 'MuseoSans500Regular', Arial;
+    font-size: 18px;
+    line-height: 22px;
+    color: black;
+}
+
+td {
+	font-family: 'MuseoSans500Regular', Arial;
+	font-size:12px;
+	font-weight: normal;
+	color:#666;
+}
+
+td .faq {
+	font-size: 16px;
+}
+
+strong {
+	color:#000;
+}
+
+	
+.marketing {
+	font-family: 'MuseoSans700Regular', Arial;
+	font-size:40px;
+	color:white;
+	text-shadow: 1px 1px 1px black;
+	padding:0px;
+	margin:0px;
+}
+
+.marketing-text {
+	font-family: 'MuseoSans500Regular', Arial;
+	font-size:22px;
+	line-height: 30px;
+	color:white;
+	text-shadow: 1px 1px 1px black;
+}
+
+
+.logo {
+	font-weight:bold;
+	font-size:32px;
+	color:#000;
+	margin-bottom:0px;
+}
+.subhead {
+	color:#999;
+}
+.navigation{
+	color:white;
+}
+.icons {
+	font-size: 12px;
+}
+
+.small {
+	font-size:14px;	
+}
+
+.large {
+	font-size: 22px;
+}
+
+.button-link-green {
+    padding: 5px 20px 5px 20px;
+    background:#669900;
+    background:-webkit-linear-gradient(#8fce22 0%, #669900 80%);
+    border:1px #669900 solid;
+    font-size:14px;
+    font-family:Geneva,Arial;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #333;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    white-space: pre;
+}
+.button-link-green:hover {
+    background:#8fce22;
+    text-decoration: none;
+    
+}
+.button-link {
+    padding: 2px 10px 2px 10px;
+    background:#DDD;
+    background:-webkit-linear-gradient(#ffffff 0%, #dddddd 80%);
+    font-size:12px;
+    font-family:Geneva,Arial;
+    color: #000;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: solid 1px #ccc;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    white-space: pre;
+}
+.button-link:hover {
+    background:-webkit-linear-gradient(#ffffff 0%, #cccccc 80%);
+    border: solid 1px #ccc;
+    text-decoration: none;
+    color:red;
+    
+}
+
+</style>
+<link rel="stylesheet" href="/5/include/css/jquery-ui-1.8.20.custom.css" >
+<link rel="stylesheet" href="/5/include/css/ui.selectmenu.css">
+
+<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+<script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+<script language="JavaScript" src="/5/include/js/ui.selectmenu.js"></script>
+<script src="/5/include/js/fancybox/jquery.fancybox.pack.js"></script>
+<script>
+function highlightButton(id) {
+	var i = document.getElementById(id);
+	i.src = '/5/images/light_buttons/' + id + '_button2.png';
+}
+
+function fadeButton(id) {
+	var i = document.getElementById(id);
+	i.src = '/5/images/light_buttons/' + id + '_button1.png';
+}
+
+function loadNewReport() {
+
+	$("#loading").fadeIn();
+	$("#loading-message").fadeIn();
+	
+}
+ 
+function ajaxFunction(url, div, closeFacebox) {
+var xmlHttp;
+	try { xmlHttp=new XMLHttpRequest(); }
+	catch (e)
+	  { try { xmlHttp=new ActiveXObject("Msxml2.XMLHTTP"); }
+	  catch (e) { try { xmlHttp=new ActiveXObject("Microsoft.XMLHTTP"); }
+		catch (e) {
+		  //alert("Your browser does not support AJAX!");
+		  return false;
+		  } } }
+	  xmlHttp.onreadystatechange=function()
+		{ if(xmlHttp.readyState==4) { 
+			document.getElementById(div).innerHTML=xmlHttp.responseText; 
+			if (closeFacebox) { $.fancybox.close(); }
+		}
+	}
+xmlHttp.open("GET",url,true);
+xmlHttp.send(null);
+return true;
+} 
+
+$(document).ready(function() { 
+	$(".various").fancybox({
+		padding		: 20,
+		fitToView	: false,
+		autoSize	: true,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'elastic'
+	});
+});
+</script>
+
+
+
+<!-- CREATE DATALAYER -->
+
+<meta name="authusername" content="">
+<meta name="avatar" content="">
+<meta name="name" content="">
+<meta name="email" content="">
+<meta name="username" content="">
+<meta name="accounttype" content="">
+<meta name="message" content="">
+<meta name="error" content="">
+
+
+<script type="text/javascript">
+dataLayer = [];
+dataLayer.push({
+	'authUsername': '',
+	'username': '',
+	'avatar':'',
+    'name':'',
+    'email':'',
+    'accountType':'',
+    'message':'',
+    'error':''
+});
+</script>
+
+
+
+
+
+
+</head>
+<body>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P2FK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P2FK');</script>
+<!-- End Google Tag Manager -->
+
+
+<div style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:999;background:#000;opacity:0.8" id="loading"></div>
+<div style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:999;padding-top:350px" id="loading-message">
+	
+	<div align="center">
+	
+		<div style="background-color:#FFF;border-radius:10px;border:3px #000 solid;padding:20px;width:100px;">
+		
+			<p><img src="/5/images/loading.gif" alt="loading" width="32" height="32" /></p>
+			
+			<p class="veryverysmall">Loading Report</p>
+			
+		
+		</div>
+	
+	</div>
+	
+</div>
+
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="header" style="position:fixed;height:100px;z-index:999">
+<tr>
+<td style="background:#FFF;border-bottom:1px #CCCCCC solid;" align="center" colspan="3">
+
+	<table width="1000" border="0" cellpadding="0" cellspacing="0" style="padding-left:30px;">
+	<tr>
+	<td valign="top" style="width:400px;height:142px;padding-top:45px;">
+	
+		<a href="/5/index.asp"><img src="/5/images/twitalyzer_logo_tag.png" alt="twitalyzer-100" width="320" height="57"/></a>
+		
+	</td>
+	<td valign="top" width="100" align="center" style="height:142px;padding-top:35px;" class="icons">
+	
+		
+	
+		<a onMouseOver="highlightButton('profile');" onMouseOut="fadeButton('profile');" href="/5/m/analytics.asp"><img id="profile" height="56" width="56" border="0" src="/5/images/light_buttons/profile_button1.png"/></a>
+		
+		<p style="margin:0px;padding-top:3px;color:#999" class="icons">Analytics</p>
+		
+		
+		
+		
+		
+		
+	</td>
+	<td width="10"><img src="/5/images/header_divider_fade.png" alt="header_divider_fade" width="6" height="114" /></td>
+	<td valign="top" width="100" align="center" style="height:142px;padding-top:35px;" class="icons">
+	
+		
+		
+		<img id="benchmarks" height="56" width="56" border="0" src="/5/images/light_buttons/benchmarks_button2.png" />
+		
+		<p style="margin:0px;padding-top:3px;color:#000" class="icons">Benchmarks</p>
+		
+		
+		
+		
+	</td>
+	<td width="10"><img src="/5/images/header_divider_fade.png" alt="header_divider_fade" width="6" height="114" /></td>
+	<td valign="top" width="100" align="center" style="height:142px;padding-top:35px;" class="icons">
+	
+		
+	
+		<a onMouseOver="highlightButton('timeline_menu');" onMouseOut="fadeButton('timeline_menu');" onclick="loadNewReport();" href="/5/m/timelines.asp"><img id="timeline_menu" height="56" width="56" border="0" src="/5/images/light_buttons/timeline_button1.png" /></a>
+		
+		<p style="margin:0px;padding-top:3px;color:#999" class="icons">Timelines</p>
+		
+		
+		
+	
+		
+	</td>
+	<td width="10"><img src="/5/images/header_divider_fade.png" alt="header_divider_fade" width="6" height="114" /></td>
+	<td valign="top" width="150" align="center" style="height:142px;padding-top:45px;" class="icons">
+	
+		<p><a class="button-link-green" href="/5/account/index.asp">Paid Plans</a></p>
+		<p>
+		
+			
+			
+			<a class="button-link" href="/5/include/oauth/twitter/authenticate.asp">  Sign In  </a>
+			
+			
+		
+		</p>
+		
+	</td>
+	</tr>
+	</table>
+	
+</td>
+</tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="padding-top:140px;">
+
+
+		
+		
+
+
+<script>
+$(document).ready(function() { 
+
+	$("select#b").selectmenu({style:"dropdown"});
+	
+})
+</script>
+<style>
+.ui-widget { 
+	font-size:14px;
+}
+
+</style>
+
+<tr>
+<td>&nbsp;</td>
+<td width="1000"></td>
+<td>&nbsp;</td>
+</tr>
+
+
+<tr>
+<td>&nbsp;</td>
+<td width="1000" align="center" valign="top" bgcolor="#FFFFFF" style="border-radius:1px;border:1px #DDDDDD solid;">
+
+	<div style="padding:40px;padding-top:10px;">
+	
+		<br />
+		<h1>Twitalyzer Benchmarks</h1>
+		
+		<table width="100%" cellpadding="0">
+		<tr>
+		<td valign="top" width="60%">
+		
+			<p>Twitalyzer's database allows our customers to find influencers around the world. We augment this data with demographic and topical data provided by Klout, PeerIndex, Rapleaf, and others.</p>
+		
+		</td>
+		<td style="width:50px">&nbsp;</td>
+		<td valign="top" align="center">
+		
+			<p>Sample Twitalyzer Benchmarks</p>
+			
+			<form action="/5/m/benchmarks.asp" method="post">
+			<select name="b" id="b" onchange="loadNewReport();form.submit()" style="width:100%;z-index:999999">
+			<option  value="top">Twitalyzer Top 25 Benchmark</option>
+			
+			<option  value="l-new+york">Tweeting from New York</option>
+			<option  value="l-london">Tweeting from London</option>
+			<option  value="l-san+francisco">Tweeting from San Francisco</option>
+			<option  value="l-sao+paulo">Tweeting from San Paulo</option>
+			<option  value="l-tokyo">Tweeting from Tokyo</option>
+			
+			<option  value="t-social+media">Talking about Social Media</option>
+			<option  value="t-music">Talking about Music</option>
+			<option  value="t-politics">Talking about Politics</option>
+			<option  value="t-iphone">Talking about Apple iPhone</option>
+			
+			<option  value="h-nba">Using #SXSW</option>
+			<option  value="h-nba">Using #ADOBESUMMIT</option>
+			
+
+			
+			</select>
+			</form>
+
+		</td>
+		</tr>
+		</table>
+
+		<br />
+		<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><div class="headlinedark"><font class="verylarge">1.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=justinbieber" class="various fancybox.ajax" style="color:black">Justin Bieber</strong> @justinbieber</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=justinbieber&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=justinbieber" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/3467035972/4c978ba8510da3fb77d2d5e9ae7c93f0_normal.jpeg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=justinbieber" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=justinbieber" class="various fancybox.ajax" style="color:black"><font class="giantnumber">39.8</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=justinbieber" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=justinbieber" class="various fancybox.ajax" style="color:black"><font class="giantnumber">93</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=justinbieber" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=justinbieber" class="various fancybox.ajax" style="color:black"><font class="giantnumber">38.4M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">2.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=ladygaga" class="various fancybox.ajax" style="color:black">Lady Gaga</strong> @ladygaga</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=ladygaga&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=ladygaga" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/2604754943/ppyl91bmwgaq4rlwjc4e_normal.png" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=ladygaga" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=ladygaga" class="various fancybox.ajax" style="color:black"><font class="giantnumber">31.3</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=ladygaga" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=ladygaga" class="various fancybox.ajax" style="color:black"><font class="giantnumber">92</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=ladygaga" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=ladygaga" class="various fancybox.ajax" style="color:black"><font class="giantnumber">36.7M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">3.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=katyperry" class="various fancybox.ajax" style="color:black">Katy Perry</strong> @katyperry</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=katyperry&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=katyperry" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/3076625497/e6aa938ef1095d5a36064cad7ae0a7b7_normal.png" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=katyperry" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=katyperry" class="various fancybox.ajax" style="color:black"><font class="giantnumber">39.8</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=katyperry" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=katyperry" class="various fancybox.ajax" style="color:black"><font class="giantnumber">91</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=katyperry" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=katyperry" class="various fancybox.ajax" style="color:black"><font class="giantnumber">35.8M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">4.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=BarackObama" class="various fancybox.ajax" style="color:black">Barack Obama</strong> @BarackObama</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=BarackObama&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=BarackObama" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/3221742532/5ceae8f2b72a1a8b012d2f5960fb46be_normal.jpeg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=BarackObama" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=BarackObama" class="various fancybox.ajax" style="color:black"><font class="giantnumber">37.9</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=BarackObama" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=BarackObama" class="various fancybox.ajax" style="color:black"><font class="giantnumber">98</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=BarackObama" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=BarackObama" class="various fancybox.ajax" style="color:black"><font class="giantnumber">30.8M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">5.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=rihanna" class="various fancybox.ajax" style="color:black">Rihanna</strong> @rihanna</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=rihanna&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=rihanna" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/3096110144/d097a719dba080cc99ca9dbfba85dfa4_normal.jpeg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=rihanna" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=rihanna" class="various fancybox.ajax" style="color:black"><font class="giantnumber">32.3</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=rihanna" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=rihanna" class="various fancybox.ajax" style="color:black"><font class="giantnumber">92</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=rihanna" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=rihanna" class="various fancybox.ajax" style="color:black"><font class="giantnumber">29.4M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">6.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=youtube" class="various fancybox.ajax" style="color:black">YouTube</strong> @youtube</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=youtube&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=youtube" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/1616286352/youtube-stacked_google_200px_normal.png" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=youtube" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=youtube" class="various fancybox.ajax" style="color:black"><font class="giantnumber">43.2</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=youtube" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=youtube" class="various fancybox.ajax" style="color:black"><font class="giantnumber">99</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=youtube" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=youtube" class="various fancybox.ajax" style="color:black"><font class="giantnumber">27.1M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">7.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=taylorswift13" class="various fancybox.ajax" style="color:black">Taylor Swift</strong> @taylorswift13</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=taylorswift13&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=taylorswift13" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/1825696714/image_normal.jpg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=taylorswift13" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=taylorswift13" class="various fancybox.ajax" style="color:black"><font class="giantnumber">31.4</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=taylorswift13" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=taylorswift13" class="various fancybox.ajax" style="color:black"><font class="giantnumber">91</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=taylorswift13" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=taylorswift13" class="various fancybox.ajax" style="color:black"><font class="giantnumber">27.0M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">8.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=britneyspears" class="various fancybox.ajax" style="color:black">Britney Spears</strong> @britneyspears</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=britneyspears&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=britneyspears" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/3253695130/afb209897fe82914fd439cf0f2ce88b1_normal.jpeg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=britneyspears" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=britneyspears" class="various fancybox.ajax" style="color:black"><font class="giantnumber">30.5</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=britneyspears" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=britneyspears" class="various fancybox.ajax" style="color:black"><font class="giantnumber">96</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=britneyspears" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=britneyspears" class="various fancybox.ajax" style="color:black"><font class="giantnumber">26.3M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">9.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=shakira" class="various fancybox.ajax" style="color:black">Shakira</strong> @shakira</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=shakira&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=shakira" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/3370738250/489b73da6733fa5aaa7ac51121f18361_normal.jpeg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=shakira" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=shakira" class="various fancybox.ajax" style="color:black"><font class="giantnumber">32.1</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=shakira" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=shakira" class="various fancybox.ajax" style="color:black"><font class="giantnumber">90</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=shakira" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=shakira" class="various fancybox.ajax" style="color:black"><font class="giantnumber">20.5M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">10.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=jtimberlake" class="various fancybox.ajax" style="color:black">Justin Timberlake </strong> @jtimberlake</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=jtimberlake&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=jtimberlake" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/3106524836/0e83d22a9c1a30cd53e30f0fc6412da2_normal.jpeg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=jtimberlake" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=jtimberlake" class="various fancybox.ajax" style="color:black"><font class="giantnumber">41.1</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=jtimberlake" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=jtimberlake" class="various fancybox.ajax" style="color:black"><font class="giantnumber">92</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=jtimberlake" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=jtimberlake" class="various fancybox.ajax" style="color:black"><font class="giantnumber">19.6M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">11.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=instagram" class="various fancybox.ajax" style="color:black">Instagram</strong> @instagram</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=instagram&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=instagram" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/1550954462/instagramIcon_normal.png" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=instagram" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=instagram" class="various fancybox.ajax" style="color:black"><font class="giantnumber">35.7</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=instagram" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=instagram" class="various fancybox.ajax" style="color:black"><font class="giantnumber">87</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=instagram" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=instagram" class="various fancybox.ajax" style="color:black"><font class="giantnumber">19.1M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">12.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=theellenshow" class="various fancybox.ajax" style="color:black">Ellen DeGeneres</strong> @theellenshow</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=theellenshow&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=theellenshow" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/1668099196/Ellen_Twitter_normal.jpeg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=theellenshow" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=theellenshow" class="various fancybox.ajax" style="color:black"><font class="giantnumber">38.4</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=theellenshow" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=theellenshow" class="various fancybox.ajax" style="color:black"><font class="giantnumber">90</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=theellenshow" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=theellenshow" class="various fancybox.ajax" style="color:black"><font class="giantnumber">18.9M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">13.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=oprah" class="various fancybox.ajax" style="color:black">Oprah Winfrey</strong> @oprah</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=oprah&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=oprah" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/1453653315/OW_and_Sadie_-_Twitter_normal.jpg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=oprah" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=oprah" class="various fancybox.ajax" style="color:black"><font class="giantnumber">40.5</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=oprah" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=oprah" class="various fancybox.ajax" style="color:black"><font class="giantnumber">91</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=oprah" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=oprah" class="various fancybox.ajax" style="color:black"><font class="giantnumber">18.4M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">14.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=twitter" class="various fancybox.ajax" style="color:black">Twitter</strong> @twitter</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=twitter&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=twitter" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/2284174758/v65oai7fxn47qv9nectx_normal.png" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=twitter" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=twitter" class="various fancybox.ajax" style="color:black"><font class="giantnumber">43.0</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=twitter" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=twitter" class="various fancybox.ajax" style="color:black"><font class="giantnumber">96</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=twitter" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=twitter" class="various fancybox.ajax" style="color:black"><font class="giantnumber">18.3M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">15.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=Cristiano" class="various fancybox.ajax" style="color:black">Cristiano Ronaldo</strong> @Cristiano</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=Cristiano&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=Cristiano" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/3511935895/19ed58132f808e11ef1889c2dca3582c_normal.jpeg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=Cristiano" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=Cristiano" class="various fancybox.ajax" style="color:black"><font class="giantnumber">32.7</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=Cristiano" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=Cristiano" class="various fancybox.ajax" style="color:black"><font class="giantnumber">89</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=Cristiano" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=Cristiano" class="various fancybox.ajax" style="color:black"><font class="giantnumber">17.8M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">16.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=kimkardashian" class="various fancybox.ajax" style="color:black">Kim Kardashian</strong> @kimkardashian</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=kimkardashian&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=kimkardashian" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/2344348679/d7fhjj1t1mms16iq0m1p_normal.jpeg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=kimkardashian" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=kimkardashian" class="various fancybox.ajax" style="color:black"><font class="giantnumber">35.3</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=kimkardashian" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=kimkardashian" class="various fancybox.ajax" style="color:black"><font class="giantnumber">88</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=kimkardashian" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=kimkardashian" class="various fancybox.ajax" style="color:black"><font class="giantnumber">17.7M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">17.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=Jlo" class="various fancybox.ajax" style="color:black">Jennifer Lopez</strong> @Jlo</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=Jlo&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=Jlo" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/2972756978/f97f1443ee2e75f95152e2bd2e13739b_normal.jpeg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=Jlo" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=Jlo" class="various fancybox.ajax" style="color:black"><font class="giantnumber">28.9</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=Jlo" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=Jlo" class="various fancybox.ajax" style="color:black"><font class="giantnumber">89</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=Jlo" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=Jlo" class="various fancybox.ajax" style="color:black"><font class="giantnumber">17.5M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">18.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=NickiMinaj" class="various fancybox.ajax" style="color:black">Nicki Minaj</strong> @NickiMinaj</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=NickiMinaj&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=NickiMinaj" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/3584244121/93101574b3e673008b0c27dc56ff890d_normal.jpeg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=NickiMinaj" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=NickiMinaj" class="various fancybox.ajax" style="color:black"><font class="giantnumber">30.4</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=NickiMinaj" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=NickiMinaj" class="various fancybox.ajax" style="color:black"><font class="giantnumber">90</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=NickiMinaj" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=NickiMinaj" class="various fancybox.ajax" style="color:black"><font class="giantnumber">16.3M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">19.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=BrunoMars" class="various fancybox.ajax" style="color:black">Bruno Mars</strong> @BrunoMars</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=BrunoMars&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=BrunoMars" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/3226400917/f40c1a666b4eae3cf3855c38e90598fd_normal.jpeg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=BrunoMars" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=BrunoMars" class="various fancybox.ajax" style="color:black"><font class="giantnumber">30.7</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=BrunoMars" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=BrunoMars" class="various fancybox.ajax" style="color:black"><font class="giantnumber">90</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=BrunoMars" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=BrunoMars" class="various fancybox.ajax" style="color:black"><font class="giantnumber">16.0M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">20.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=Pink" class="various fancybox.ajax" style="color:black">P!nk</strong> @Pink</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=Pink&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=Pink" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/549375583/Pinkdeborahanderson_112_normal.jpg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=Pink" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=Pink" class="various fancybox.ajax" style="color:black"><font class="giantnumber">33.0</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=Pink" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=Pink" class="various fancybox.ajax" style="color:black"><font class="giantnumber">83</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=Pink" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=Pink" class="various fancybox.ajax" style="color:black"><font class="giantnumber">15.4M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">21.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=selenagomez" class="various fancybox.ajax" style="color:black">Selena Gomez</strong> @selenagomez</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=selenagomez&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=selenagomez" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/3437760188/50b030d6238710ab7eb572f85659e284_normal.jpeg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=selenagomez" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=selenagomez" class="various fancybox.ajax" style="color:black"><font class="giantnumber">42.0</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=selenagomez" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=selenagomez" class="various fancybox.ajax" style="color:black"><font class="giantnumber">89</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=selenagomez" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=selenagomez" class="various fancybox.ajax" style="color:black"><font class="giantnumber">14.9M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">22.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=Eminem" class="various fancybox.ajax" style="color:black">Marshall Mathers</strong> @Eminem</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=Eminem&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=Eminem" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/859433636/recoveryapprovedcrop_normal.jpg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=Eminem" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=Eminem" class="various fancybox.ajax" style="color:black"><font class="giantnumber">34.1</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=Eminem" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=Eminem" class="various fancybox.ajax" style="color:black"><font class="giantnumber">90</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=Eminem" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=Eminem" class="various fancybox.ajax" style="color:black"><font class="giantnumber">14.4M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">23.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=aplusk" class="various fancybox.ajax" style="color:black">ashton kutcher</strong> @aplusk</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=aplusk&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=aplusk" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/1972890789/aplusk_logo_sm_normal.jpg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=aplusk" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=aplusk" class="various fancybox.ajax" style="color:black"><font class="giantnumber">22.3</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=aplusk" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=aplusk" class="various fancybox.ajax" style="color:black"><font class="giantnumber">86</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=aplusk" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=aplusk" class="various fancybox.ajax" style="color:black"><font class="giantnumber">14.2M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">24.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=ddlovato" class="various fancybox.ajax" style="color:black">demetria lovato</strong> @ddlovato</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=ddlovato&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=ddlovato" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/3461353254/1ed0ac1200ee0bee2d3657e2b621443b_normal.jpeg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=ddlovato" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=ddlovato" class="various fancybox.ajax" style="color:black"><font class="giantnumber">41.8</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=ddlovato" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=ddlovato" class="various fancybox.ajax" style="color:black"><font class="giantnumber">84</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=ddlovato" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=ddlovato" class="various fancybox.ajax" style="color:black"><font class="giantnumber">13.6M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td><div class="headlinedark"><font class="verylarge">25.</font> &nbsp;<a href="/5/include/functions/getAuthor.asp?a=OfficialAdele" class="various fancybox.ajax" style="color:black">Adele</strong> @OfficialAdele</a><span style="float:right;font-size:12px;padding-top:5px;"><a style="color:#999" href="/5/r.asp?u=OfficialAdele&r=/5/m/benchmarks.asp">0 days</a></span></div><table width="100%" border="0"><tr><td width="10%" align="center"><a href="/5/include/functions/getAuthor.asp?a=OfficialAdele" class="various fancybox.ajax" style="color:black"><img class="shadow" src="http://a0.twimg.com/profile_images/1676212439/image_normal.jpg" width="70" /></a></td><td width="15%" align="right" id="impactcell"><a href="/5/include/functions/getAuthor.asp?a=OfficialAdele" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitalyzer-100.png" width="80" /></a></td><td width="15%" align="center" id="impactcelltext"><a href="/5/include/functions/getAuthor.asp?a=OfficialAdele" class="various fancybox.ajax" style="color:black"><font class="giantnumber">31.7</font><br><font class="small">Impact</font></a></td><td width="15%" align="right" valign="top" id="kloutcell"><a href="/5/include/functions/getAuthor.asp?a=OfficialAdele" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/klout-100.png" width="100" /></a></td><td width="15%" align="center" id="kloutcelltext"><a href="/5/include/functions/getAuthor.asp?a=OfficialAdele" class="various fancybox.ajax" style="color:black"><font class="giantnumber">89</font><br><font class="small">Klout</font></a></td><td width="15%" align="right" valign="middle" id="followerscell"><a href="/5/include/functions/getAuthor.asp?a=OfficialAdele" class="various fancybox.ajax" style="color:black"><img border="0" src="/5/images/twitter-100.png" width="100" /></a></td><td width="15%" align="center" id="followerscelltext" ><a href="/5/include/functions/getAuthor.asp?a=OfficialAdele" class="various fancybox.ajax" style="color:black"><font class="giantnumber">13.5M</font><br><font class="small">Followers</font></a></td></tr></table></td></tr><tr><td>&nbsp;</td></tr></table>
+		
+	</div>
+		
+
+</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td valign="top" width="1000" style="padding-top:10px;">
+
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+	<td valign="top" bgcolor="#FFFFFF" style="border-radius:1px;border:1px #DDDDDD solid;">
+	
+		<div style="padding:40px;padding-top:10px;">	
+			
+		<p align="center" style="padding-bottom:20px;">Paying customers of Twitalyzer can analyze any location, topic, or hashtag they like without limitation.</p>
+		
+		<p align="center"><a class="button-link-green" style="font-size:24px" href="/5/account/start-demo.asp">        Start your FREE trial now!        </a></p>
+		
+	
+	</div>
+	
+</td>
+<td>&nbsp;</td>
+</tr>
+
+
+<!-------- END CODE FOR PAGE ----->
+
+
+</table>
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+<div align="center" style="position:fixed;bottom:0;left:0;width:100%;z-index:999;background:#FFF;border-top:1px #CCCCCC solid;padding:10px;font-size:12px" class="text">
+	
+	<a style="color:black" href="/5/account/index.asp">Interested in a PAID SUBSCRIPTION?</a> | <a style="color:black" class="various" href="#privacy">Privacy</a> | <a style="color:black" target="_blank" href="http://support.twitalyzer.com/home">Support</a> | <a style="color:black" href="mailto:support@twitalyzer.com">Contact</a> | <a style="color:black" href="http://blog.twitalyzer.com">Blog</a>
+ | @<a target="_blank" style="color:black" href="http://twitter.com/twitalyzer">Twitalyzer</a>
+	
+</div>
+
+
+<!-- popups --->
+
+<div style="display:none;width:700px;" id="privacy" class="text">
+
+	<div class="headlineverydark">Twitalyzer's Data Use and Privacy Policy</div>
+		
+		<p>Twitalyzer makes use of publicly available data in all cases, regardless of source. We rely on public Twitter streams, publicly available data from Klout, PeerIndex, and Rapleaf, and reserve the right to add other data from the public domain from time to time. We do not use direct messages or any other type of private information in any of our processing or reporting.</p>
+		
+		<p>We do make some of this data available to non-customers, through our profile reports, benchmarks, and timelines. In fact, anyone with a public Twitter profile can be processed and viewed via our profile reports.</p>
+		
+		<p>That said, we try to be very careful with the data we collect, and if you <i>ever</i> observe us using your data in a manner that makes you uncomfortable or otherwise concerned, <a href="mailto:support@twitalyzer.com">please email us directly.</a></p>
+		
+		
+		
+</div>
+
+
+
+</body>
+</html>
