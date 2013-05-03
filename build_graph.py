@@ -1,6 +1,16 @@
 from py2neo import neo4j
 import json
 from pprint import pprint
+from datetime import datetime
+
+def dump_log(loc, arr):
+	f = open(loc,"a")
+	s =""	
+	for elem in arr:
+		s = s+str(elem)+"\t"
+	s = s+"\n"
+	f.write(s)
+	f.close()
 
 def insert_authors(loc):
 	
@@ -58,11 +68,13 @@ def insert_followers(loc):
 			for n in nodes:
 				batch.get_or_create_relationship(n, "follows", author)
 			rels = batch.submit()
+			cout+=1
 			# print rels
-			print "A batch of relations inserted"
-		
+			# print "A batch of relations inserted"
+			dump_log("/home/pranayag/neo/src/graph_insert_log.txt", [loc, datetime.now(), count])
 		else:
-			print "author not in db"
+			# print "author not in db"
+			dump_log("/home/pranayag/neo/src/graph_insert_log.txt", [loc, datetime.now(), -1])
 		# print author
 		# print graph_db.get_properties(author)
 		# break
@@ -96,11 +108,15 @@ def insert_friends(loc):
 			
 			rels = batch.submit()
 			count+=1
+			
+
 			# print rels
-			print "inserted batch id ",count
+			# print "inserted batch id ",count
+			dump_log("/home/pranayag/neo/src/graph_insert_log.txt", [loc, datetime.now(), count])
 		
 		else:
-			print "author not in db"
+			dump_log("/home/pranayag/neo/src/graph_insert_log.txt", [loc, datetime.now(), -1])
+			# print "author not in db"
 		# print author
 		# print graph_db.get_properties(author)
 		# break
@@ -108,11 +124,10 @@ def insert_friends(loc):
 	f.close()
 
 
-
-l1 = "/Users/pranayag/mtp/visualize/data/authors.txt"	
-l2 = "/Users/pranayag/mtp/visualize/data/followers.txt.head"	
-l3 = "/Users/pranayag/mtp/visualize/data/friends.txt"	
+l1 = "/home/pranayag/graph/2013-04-03/authors.txt"
+l2 = "/home/pranayag/graph/2013-04-03/followers.txt"
+l3 = "/home/pranayag/graph/2013-04-03/friends.txt"
 
 # insert_authors(l1)
-insert_followers(l2)
-# insert_friends(l3)
+#insert_followers(l2)
+insert_friends(l3)
