@@ -1,4 +1,9 @@
-from py2neo import neo4j
+# This scripts generates the neo4j graph from the social relations
+# extracted using TwitterAPI and stored in text json objects
+
+
+
+sfrom py2neo import neo4j
 import json
 from pprint import pprint
 from datetime import datetime

@@ -1,4 +1,9 @@
-import json
+# Get all tweet object containg the topic keywords in the text
+# A naitve to get all the tweets related to particular topic.
+
+
+
+wimport json
 from pprint import pprint
 from datetime import datetime
 import os
