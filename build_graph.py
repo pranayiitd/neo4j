@@ -3,7 +3,7 @@
 
 
 
-sfrom py2neo import neo4j
+from py2neo import neo4j
 import json
 from pprint import pprint
 from datetime import datetime
