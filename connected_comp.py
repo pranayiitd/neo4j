@@ -12,11 +12,10 @@ def handle_row(row):
 	node = row[0]
 	global gcount
 	gcount+=1
-	print "starting.."
 	global time_stamp
 
-	if(gcount %1000==0):
-		print gcount
+	# if(gcount %1000==0):
+	# 	print gcount
 	
 	rf = False
 	if(node['time_stamp'] == None):
@@ -25,15 +24,18 @@ def handle_row(row):
 		if(node['time_stamp'] != time_stamp):
 			rf = True
 	
-
+#  Start of A new connected component
 	if(rf==True):
 		global graph_component
-		cid = 0
-		if(node['visited'] == None):
-			cid = len(graph_component)
-			node['visited'] = cid
-		else:
-			cid = node['visited']
+		# Giving new cid to this component
+		cid = len(graph_component)
+		node['visited'] = cid
+
+		# if(node['visited'] == None):
+		# 	cid = len(graph_component)
+		# 	node['visited'] = cid
+		# else:
+		# 	cid = node['visited']
 			
 		bfs(node, cid, graph_component, time_stamp)
 		
@@ -70,17 +72,20 @@ def bfs(node, cid, graph_component, time_stamp):
 
 time_stamp = 2
 
+# Returns the largest and second largest connected component size
+# at time time ts.
 def main(ts):
 	global time_stamp
 	time_stamp = ts
-	print time_stamp	
-	print " Start the BFS..."
+	# print time_stamp	
+	# print " Start the BFS..."
 	graph_db = neo4j.GraphDatabaseService("http://localhost:7475/db/data/")
-	print " connected to DB."
+	# print " connected to DB."
 	cypher.execute(graph_db, "START z=node(*) RETURN z", row_handler=handle_row)
 	return get_comp_sizes(graph_component.values())
-	# print max(), min(graph_component.values())
 
+
+# Returns highest, and second higest value in the array.
 def get_comp_sizes(arr):
 	one = 1
 	two = 1
@@ -94,4 +99,4 @@ def get_comp_sizes(arr):
 
 	return[one, two]
 
-print main(2)
+# print main(2)

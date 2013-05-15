@@ -6,6 +6,7 @@ from py2neo import neo4j
 import json
 from pprint import pprint
 from datetime import datetime
+import connected_comp
 
 def dump_log(loc, arr):
 	f = open(loc,"a")
@@ -55,7 +56,7 @@ def insert_day_1(loc):
 	print "tweets :", c1," day 1 nodes :", c2
 	f.close()
 
-def insert_day_n(loc, day):
+def insert_day_n(loc, day, log_loc):
 	
 	graph_db = neo4j.GraphDatabaseService("http://localhost:7474/db/data/")
 	graph_db_topic = neo4j.GraphDatabaseService("http://localhost:7475/db/data/")
@@ -64,12 +65,24 @@ def insert_day_n(loc, day):
 	
 	f = open(loc,"r")
 	line = f.readline()
+	window = 0
+
 	while(line):
-		c1 +=1
-		tobj = json.loads(line)
-		id_ = str(tobj['rtds_tweet']['user_id'])
+		
+		# tobj = json.loads(line)
+		# id_ = str(tobj['rtds_tweet']['user_id'])
 		# id_ = 1107232339
+		tobj = line.split("\t")
+		id_ = tobj[0]
+		ts = int(tobj[1])
+		
+		# intializing the window with the time_stamp of first tweet
+		
+		if(c1 == 0):
+			window = ts
+		
 		n = graph_db.get_indexed_node("users", "uid", str(id_))
+		c1 +=1
 		
 		# If that user present in main database
 		if(n):
@@ -78,25 +91,31 @@ def insert_day_n(loc, day):
 			friends = n.get_related_nodes(neo4j.Direction.OUTGOING,"follows")
 			
 			profile['day'] = day
+			profile['ts'] = ts
 			# Inserting the author if not already in topical Graph G(t)
 			author = graph_db_topic.get_or_create_indexed_node("users", "uid", id_, profile)
 			
 			for friend in friends:
-				fid = friends[uid]
+				fid = friend["uid"]
 				fn = graph_db_topic.get_indexed_node("users", "uid", str(fid))
 				# If my friend already present in G(t-1)
 				if(fn):
 					graph_db_topic.create( (author, "follows", fn))
-
+		
+		# update the window every 30 min
+		# get the connected components sizes.
+		if(ts > window + 30*60):
+			window = ts
+			l1, l2 = connected_comp.main(ts)
+			dump_log(log_loc,[c1, c2, l1, l2])
 
 		line = f.readline()
 
 
 
 	f.close()
-	print "tweets :", c1," day ", n ,"nodes :", c2
 
 
 
-insert_day_1("/home/pranayag/neo/cluster/camarillo-fire-2.txt")
-insert_day_n("/home/pranayag/neo/cluster/camarillo-fire-3.txt", 2)
+insert_day_n("/home/pranayag/neo/cluster/2.txt",1,"/home/pranayag/neo/cluster/log.txt")
+insert_day_n("/home/pranayag/neo/cluster/3.txt", 2, "/home/pranayag/neo/cluster/log.txt")
