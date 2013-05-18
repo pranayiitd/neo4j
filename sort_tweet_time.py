@@ -57,11 +57,12 @@ def sort_folder(src, dst):
 			ts = int(tweet_row[1])
 			text =tweet_row[2]
 			tweet_arr.append((uid, ts, text))
+			line = f.readline()
 
 		f.close()
 		tweet_arr.sort(key = lambda tup : tup[1])
 
-		f = (dst+fil,"w")
+		f = open(dst+fil,"w")
 		for a in tweet_arr:
 			f.write(make_row([a[0], a[1], a[2]]))
 		f.close()

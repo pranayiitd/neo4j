@@ -1,18 +1,6 @@
-#  Checks What fractions of users from different cases, are present in the
-#  neo4j graph created so far. Case 1. celebs 2. Trending tweets 3. random.
-
 from py2neo import neo4j
 import json
 from pprint import pprint
-
-def dump_log(loc, arr):
-	f = open(loc,"a")
-	s =""	
-	for elem in arr:
-		s = s+str(elem)+"\t"
-	s = s+"\n"
-	f.write(s)
-	f.close()
 
 
 def celebs():
@@ -44,7 +32,7 @@ def celebs():
 def trending_nodes():
 	graph_db = neo4j.GraphDatabaseService("http://localhost:7474/db/data/")
 
-	f = open('/home/pranayag/neo/cluster/camarillo-fire-2.txt',"r")
+	f = open('/home/pranayag/neo/cluster/camarillo-fire-3.txt',"r")
 	line = f.readline()
 	count =0
 
@@ -54,7 +42,7 @@ def trending_nodes():
 		n = graph_db.get_indexed_node("users", "uid", id_)
 		if(n):
 			count+=1
-			print graph_db.get_properties(n)
+			#print graph_db.get_properties(n)
 		
 		line = f.readline()
 

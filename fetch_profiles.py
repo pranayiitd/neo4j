@@ -1,12 +1,8 @@
-# This script tries to find author profiles of the users present in the
-# current social graph by finding tweets by them in RTDS DUMP
-
 from py2neo import neo4j
 import json
 from pprint import pprint
 from datetime import datetime
 import os
-
 
 def dump_log(loc, arr):
 	f = open(loc,"a")
@@ -16,6 +12,7 @@ def dump_log(loc, arr):
 	s = s+"\n"
 	f.write(s)
 	f.close()
+
 
 def update_profile(n, tobj):
 		
@@ -36,8 +33,8 @@ def update_profile(n, tobj):
 
 graph_db = neo4j.GraphDatabaseService("http://localhost:7474/db/data/")
 
-loc = "/Users/pranayag/mtp/india/sample/"
-log = "/Users/pranayag/mtp/india/sample/log.txt"
+loc = "/home/y/var/timesense/data/twitter_rawTweets/en-US/syc/2013-05-02/"
+log = "/home/pranayag/neo/src/profile_log.txt"
 
 fl = os.listdir(loc)
 for f in fl:
@@ -47,9 +44,8 @@ for f in fl:
 	while line:
 		
 		tobj = json.loads(line)
-		# Check if that uid in DB.
 		pprint(tobj)
-		break
+		# Check if that uid in DB.
 		id_ = str(tobj['rtds_tweet']['user_id'])
 		n = graph_db.get_indexed_node("users", "uid", id_)
 		

@@ -106,8 +106,8 @@ def insert_day_n(loc, day, log_loc):
 		# get the connected components sizes.
 		if(ts > window + 30*60):
 			window = ts
-			l1, l2 = connected_comp.main(ts)
-			dump_log(log_loc,[c1, c2, l1, l2])
+			l1, l2, mid, avg, l = connected_comp.main(ts)
+			dump_log(log_loc,[c1, c2, l1, l2, mid, avg, l, datetime.now()])
 
 		line = f.readline()
 
@@ -117,5 +117,5 @@ def insert_day_n(loc, day, log_loc):
 
 
 
-insert_day_n("/home/pranayag/neo/cluster/2.txt",1,"/home/pranayag/neo/cluster/log.txt")
-insert_day_n("/home/pranayag/neo/cluster/3.txt", 2, "/home/pranayag/neo/cluster/log.txt")
+insert_day_n("/home/pranayag/neo/cluster/sorted_tweets/0.txt", 1, "/home/pranayag/neo/cluster/log0.txt")
+#insert_day_n("/home/pranayag/neo/cluster/3.txt", 2, "/home/pranayag/neo/cluster/log.txt")

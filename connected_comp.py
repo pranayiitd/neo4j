@@ -24,21 +24,14 @@ def handle_row(row):
 		if(node['time_stamp'] != time_stamp):
 			rf = True
 	
-#  Start of A new connected component
+
 	if(rf==True):
 		global graph_component
-		# Giving new cid to this component
 		cid = len(graph_component)
 		node['visited'] = cid
-
-		# if(node['visited'] == None):
-		# 	cid = len(graph_component)
-		# 	node['visited'] = cid
-		# else:
-		# 	cid = node['visited']
 			
 		bfs(node, cid, graph_component, time_stamp)
-		
+		#print graph_component[cid],node['uid']		
 	else:
 		return
 
@@ -77,6 +70,8 @@ time_stamp = 2
 def main(ts):
 	global time_stamp
 	time_stamp = ts
+	global graph_component
+	graph_component ={}
 	# print time_stamp	
 	# print " Start the BFS..."
 	graph_db = neo4j.GraphDatabaseService("http://localhost:7475/db/data/")
@@ -87,16 +82,14 @@ def main(ts):
 
 # Returns highest, and second higest value in the array.
 def get_comp_sizes(arr):
-	one = 1
-	two = 1
-	for a in arr :
-		if(a > one):
-			two = one
-			one = a
-		else:
-			if(a > two):
-				two = a
+	#print arr
+	arr.sort()
+	l = len(arr)
+	one = arr[l-1]
+	two = arr[l-2]
+	median = arr[l/2]
+	avg = sum(arr)/l
+	
+	return[one, two, median, avg, l ]
 
-	return[one, two]
-
-# print main(2)
+#print main(3)
