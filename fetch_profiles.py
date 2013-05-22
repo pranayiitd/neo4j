@@ -31,19 +31,25 @@ def update_profile(n, tobj):
 
 
 
-graph_db = neo4j.GraphDatabaseService("http://localhost:7474/db/data/")
+
 
 # Source of rtds twitter feeds.
-loc = "/home/y/var/timesense/data/twitter_rawTweets/en-US/syc/2013-05-02/"
-log = "/home/pranayag/neo/src/profile_log.txt"
+# Source of rtds twitter feeds.
+#loc = "/home/y/var/timesense/data/twitter_rawTweets/en-US/syc/2013-05-02/"
+
 
 def main(loc, log):
+	
+	graph_db = neo4j.GraphDatabaseService("http://localhost:7474/db/data/")
+	count =0
+	c1 =0; c2=0;c3=0
+
 	f_list = os.listdir(loc)
 	for f in f_list:
 		fo = open(loc+f,"r")
 		line = fo.readline()
-		count =0	
 		while line:
+			c1+=1
 			tobj = json.loads(line)
 			# Check if that uid in DB.
 			id_ = str(tobj['rtds_tweet']['user_id'])
@@ -52,23 +58,30 @@ def main(loc, log):
 			# update profile only if user in out database.
 			# Activity reflects the frequent tweets by user.
 			if(n):
+				c2+=1
 				if(n['activity']==None):
 					n['activity']==1
 				else:
 					n['activity']+=1
 
 				if(n['is_author']=='0' and n['activity'] == None):
+					count+=1
 					try:
 						update_profile(n, tobj)
 
 					except:
 						line = fo.readline()
+						c3+=1
 						continue
-					count+=1
 
-				if(count %100 == 0):
-					dump_log(log, [loc+f, datetime.now(), count ])
+				if(count %1000 == 0):
+					dump_log(log, [f, datetime.now(), c1, c2, count, c3 ])
 			
 			line = fo.readline()		
 
 		fo.close()
+
+loc = "/home/y/var/timesense/data/twitter_filteredTweets_rsync/en-US/syc/2013-05-20/"
+log = "/home/pranayag/neo/logs/profile_log_3.txt"
+main(loc, log)
+

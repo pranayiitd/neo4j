@@ -117,5 +117,5 @@ def insert_day_n(loc, day, log_loc):
 
 
 
-insert_day_n("/home/pranayag/neo/cluster/sorted_tweets/0.txt", 1, "/home/pranayag/neo/cluster/log0.txt")
+insert_day_n("/home/pranayag/neo/cluster/sorted_tweets/5.txt", 1, "/home/pranayag/neo/cluster/log5.txt")
 #insert_day_n("/home/pranayag/neo/cluster/3.txt", 2, "/home/pranayag/neo/cluster/log.txt")
