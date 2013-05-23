@@ -7,19 +7,15 @@ def topics_list():
 	loc = "/home/pranayag/india/topics/"
 	files = os.listdir(loc)
 	topics ={}
-	# print files
 	for f in files:
 		fo = open(loc+f,"r")
 		line = fo.readline()
 		trends = json.loads(json.loads(line)['trends'])[0]['trends']
 		for t in trends:
-			# print t['name']
 			if((topics.has_key(t['name'])) == True):
 				topics[t['name']]+=1
 			else:
 				topics[t['name']] = 1
-		# pprint(trends[0])
-		# break
 
 	data = topics.items()
 	data.sort(key=lambda tup: tup[1])
@@ -27,12 +23,9 @@ def topics_list():
 
 def cluster_dump(data, t):
 	text = t['text'].lower()
-	# print text
 	for d in data:
 		if(text.find(d[0].lower()) >0 ):
-			# print d
 			d[2].write(json.dumps(t)+"\n")
-
 
 
 def cluster_tweet():
@@ -51,6 +44,5 @@ def cluster_tweet():
 		tweets = json.loads(json.loads(line)['tweets'])['statuses']
 		for t in tweets:
 			cluster_dump(data, t)
-			# print t['text'].lower().find('Earth'.lower())
 
-cluster_tweet()	
+
