@@ -7,6 +7,8 @@ import os
 import oauth2 as oauth
 import twitter
 import os
+import sys
+
 
 def dump_log(loc, arr):
 	f = open(loc,"a")
@@ -130,7 +132,7 @@ def main():
 		set_app.append(app)
 		i+=5
 
-	loc = "/home/pranayag/neo/cluster/raw/1.txt"	
+	loc = "/home/pranayag/neo/cluster/sorted_tweets/1.txt"	
 	log = "/home/pranayag/neo/logs/angelina_graph_log.txt"
 
 	graph_db = neo4j.GraphDatabaseService("http://localhost:7474/db/data/")
@@ -180,8 +182,8 @@ def main():
 
 			if(limit < 3):
 				# Log the current status
-				dump_log(log, [loc, count_authors, count_followers, count_friends, datetime.now(), limit,"limit_reached"])
-				i, v, time_elapsed = switch_sleep(i, v, time_elapsed)
+				dump_log(log, [loc, count_authors, count_followers, count_friends, datetime.now(), limit,"limit_reached", i, v, time_elapsed ])
+				i, v, time_elapsed = switch_sleep(i, v, time_elapsed, log)
 				app = set_app[i]
 				CONSUMER_KEY = app['c_key']
 				CONSUMER_SECRET = app['c_sec']
@@ -200,7 +202,8 @@ def main():
 	dump_log(log, [loc, count_authors, count_followers, count_friends, datetime.now(), limit,"end_while"])
 
 
-def switch_sleep(i, v, time_elapsed):
+def switch_sleep(i, v, time_elapsed, log):
+	time.sleep(1)
 	if(i<3):
 		i+=1
 	else:
@@ -208,7 +211,7 @@ def switch_sleep(i, v, time_elapsed):
 			v=1.1
 			i=0
 		else:
-			dump_log(log, [loc, count_authors, count_followers, count_friends, datetime.now(), limit, "sleeping 15 mins")
+			dump_log(log, [loc, count_authors, count_followers, count_friends, datetime.now(), limit, "sleeping 15 mins"])
 			time.sleep(15*60)
 			time_elapsed +=15
 			i=0
