@@ -1,10 +1,15 @@
+import time
+from datetime import datetime
 
 def main():
-    for i in range(5):
-        if(i==2):
-            continue
-        print i
+	# time.sleep(50)
+	f = open("dump.txt","a")
+	for i in range(5):
+		print i
+		time.sleep(1)
+		f.write(str(datetime.now())+"\n")
 
-    return "the return value"
+	# return "the return value"
+	f.close()
 
 main()
