@@ -122,7 +122,7 @@ def main():
 			line = line.replace("\n","")
 			row  = line.split("\t")
 			tweet = row[2]
-			ts = row[1]
+			ts = int(row[1])
 
 			# tobj = json.loads(line)
 			# tweet = tobj['rtds_tweet']['text'].encode("ascii","ignore")

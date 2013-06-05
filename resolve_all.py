@@ -183,7 +183,7 @@ def main():
 			if(limit < 3):
 				# Log the current status
 				dump_log(log, [loc, count_authors, count_followers, count_friends, datetime.now(), limit,"limit_reached", i, v, time_elapsed ])
-				i, v, time_elapsed = switch_sleep(i, v, time_elapsed, log)
+				i, v, time_elapsed = switch_sleep(i, v, time_elapsed, log, graph_db, author_id)
 				app = set_app[i]
 				CONSUMER_KEY = app['c_key']
 				CONSUMER_SECRET = app['c_sec']
@@ -195,14 +195,14 @@ def main():
 		except:
 			line = f.readline()
 			dump_log(log, [loc, count_authors, count_followers, count_friends, datetime.now(), limit, sys.exc_info()[0]])
-			continue;
+			continue
 		
 		line = f.readline()
 
 	dump_log(log, [loc, count_authors, count_followers, count_friends, datetime.now(), limit,"end_while"])
 
 
-def switch_sleep(i, v, time_elapsed, log):
+def switch_sleep(i, v, time_elapsed, log, graph_db, author_id):
 	time.sleep(1)
 	if(i<3):
 		i+=1
@@ -211,8 +211,10 @@ def switch_sleep(i, v, time_elapsed, log):
 			v=1.1
 			i=0
 		else:
-			dump_log(log, [loc, count_authors, count_followers, count_friends, datetime.now(), limit, "sleeping 15 mins"])
-			time.sleep(15*60)
+			dump_log(log, [ i, v, time_elapsed,  datetime.now(), "sleeping 15 mins"])
+			for j in range(60):
+				time.sleep(15)
+				n = graph_db.get_indexed_node("users", "uid", str(author_id))
 			time_elapsed +=15
 			i=0
 			if(time_elapsed >= 60):
